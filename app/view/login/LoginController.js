@@ -56,7 +56,7 @@ Ext.define('CEPLFront.view.login.LoginController', {
         {
 
             // Set the localStorage value to true
-            localStorage.setItem("loginLoggedIn", true);
+            localStorage.setItem("loggedIn", true);
 
             // Remove Login Window
             this.getView().destroy();
