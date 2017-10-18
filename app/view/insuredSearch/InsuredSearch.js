@@ -1,6 +1,7 @@
 /**
  * Created by sarb on 10/18/17.
  */
+//TODO model alias
 Ext.define('CEPLFront.view.insuredSearch.InsuredSearch', {
     extend: 'Ext.Container',
 
@@ -13,10 +14,6 @@ Ext.define('CEPLFront.view.insuredSearch.InsuredSearch', {
     layout:'absolute',
     xtype: 'insuredSearch',
     rtl:true,
-
-    viewModel: {
-        type: 'insuredsearch'
-    },
 
     controller: 'insuredsearch',
 
@@ -33,9 +30,7 @@ Ext.define('CEPLFront.view.insuredSearch.InsuredSearch', {
                     fieldLabel: 'نام بیمه گذار',
                     name: 'searchWithName',
                     listeners: {
-                        focus: function () {
-                            alert("hello");
-                        }
+                        focus: 'onFieldSelected'
                     }
                 },
                 {
@@ -49,7 +44,10 @@ Ext.define('CEPLFront.view.insuredSearch.InsuredSearch', {
                 xtype: 'button',
                 iconCls: 'x-fa fa-search',
                 text: 'جست و جو',
-                scale: 'medium'
+                scale: 'medium',
+                listeners:{
+                    click:'searchClicked'
+                }
             }
         ]
     }

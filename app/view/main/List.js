@@ -4,12 +4,10 @@
 Ext.define('CEPLFront.view.main.List', {
     extend: 'Ext.grid.Panel',
     xtype: 'mainlist',
-
     requires: [
-        'CEPLFront.store.Personnel'
+        'CEPLFront.store.Personnel',
+        'Ext.plugin.Viewport'
     ],
-
-    title: 'Personnel',
 
     store: {
         type: 'personnel'

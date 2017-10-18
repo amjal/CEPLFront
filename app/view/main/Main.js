@@ -23,7 +23,6 @@ Ext.define('CEPLFront.view.main.Main', {
 
     controller: 'main',
     viewModel: 'main',
-
     ui: 'navigation',
 
     tabBarHeaderPosition: 1,

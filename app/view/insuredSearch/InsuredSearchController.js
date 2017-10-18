@@ -5,10 +5,14 @@ Ext.define('CEPLFront.view.insuredSearch.InsuredSearchController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.insuredsearch',
 
+    requires: [
+        'CEPLFront.view.main.List'
+    ],
+
     /**
      * Called when the view is created
      */
-    init: function() {
-
+    searchClicked:function(){
+        Ext.create('CEPLFront.view.main.List');
     }
 });

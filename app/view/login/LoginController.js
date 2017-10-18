@@ -54,7 +54,6 @@ Ext.define('CEPLFront.view.login.LoginController', {
 
         onLoginClick: function()
         {
-
             // Set the localStorage value to true
             localStorage.setItem("loggedIn", true);
 
