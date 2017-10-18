@@ -9,6 +9,9 @@ Ext.define('CEPLFront.view.main.Main', {
     extend: 'Ext.tab.Panel',
     xtype: 'app-main',
 
+    rtl: true,
+    plugins: 'viewport',
+
     requires: [
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
@@ -76,29 +79,17 @@ Ext.define('CEPLFront.view.main.Main', {
     },
 
     items: [{
-        title: 'Home',
-        iconCls: 'fa-home',
-        // The following grid shares a store with the classic version's grid as well!
-        items: [{
-            xtype: 'mainlist'
-        }]
+        title: 'جستوجوی بیمه گذار',
+        iconCls: 'fa-search',
+        xtype: 'insuredSearch'
     }, {
-        title: 'Users',
-        iconCls: 'fa-user',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        title: 'رتبه بندی',
+        iconCls: 'fa-trophy',
+        xtype: 'ranking'
+
     }, {
-        title: 'Groups',
-        iconCls: 'fa-users',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }, {
-        title: 'Settings',
-        iconCls: 'fa-cog',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        title: 'تست...',
+        iconCls: 'fa-tint',
+        xtype: 'test'
     }]
 });
