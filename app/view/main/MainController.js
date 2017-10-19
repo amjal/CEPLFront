@@ -30,5 +30,5 @@ Ext.define('CEPLFront.view.main.MainController', {
         Ext.create({
             xtype: 'login'
         });
-    },
+    }
 });
