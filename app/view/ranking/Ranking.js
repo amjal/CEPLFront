@@ -37,11 +37,16 @@ Ext.define('CEPLFront.view.ranking.Ranking', {
                         type: 'insured'
                     },
                     columns: [
-                        { text: 'اسم', dataIndex: 'userName' , flex: 1 },
-                        { text: 'جنسیت', dataIndex: 'gender', flex: 1 }
+                        {  name: 'شناسه', dataIndex: 'id', flex: 1},
+                        {  name: 'نام کاربری', dataIndex: 'username', flex: 3},
+                        {  name: 'تاریخ تولد', dataIndex: 'birthDate', flex: 3},
+                        {  name: 'جنسیت', dataIndex: 'gender', flex: 2},
+                        {  name: 'تاریخ گرفتن گواهینامه', dataIndex: 'certificateYear', flex: 4},
+                        {  name: 'ایمیل', dataIndex: 'email', flex: 3},
+                        {  name: 'تحصیلات', dataIndex: 'education', flex: 2},
+                        {  name: 'کدملی', dataIndex: 'nationalid', flex: 3},
                     ],
                     height: 300,
-                    width: 1000,
 
                     listeners: {
                         select: 'onItemSelected'
