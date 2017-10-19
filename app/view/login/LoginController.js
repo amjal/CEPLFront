@@ -7,28 +7,19 @@ Ext.define('CEPLFront.view.login.LoginController', {
 
     onLoginClick: function ()
     {
-        Ext.Ajax.request({
-            url: 'HTTP://192.168.110.103:8080/bimehtech/api/login',
-
-            method: 'POST',
-
-            params: {
-                ajax_req: Ext.util.JSON.encode({
-                    username: Ext.getCmp('userField').value,
-                    password: Ext.getCmp('passField').value,
-                    role: "user"
-                })
-            },
-
-            success: function (response, opts)
-            {
+        var loginModel=Ext.create('CEPLFront.model.UserLoginModel',{
+            username: Ext.getCmp('userField').value,
+            password: Ext.getCmp('passField').value,
+            role: "agent"
+        });
+        loginModel.save({
+                success: function (response, opts) {
                 var responseTxt = JSON.parse(response.responseText);
 
                 if (responseTxt.logged === true)
                 {
-                    console.log("logged in!" + response);
 
-                    localStorage.setItem("loginLoggedIn", true);
+                    localStorage.setItem("loggedIn", true);
 
                     Ext.getCmp('loginPage').destroy();
                     Ext.create({
@@ -40,25 +31,12 @@ Ext.define('CEPLFront.view.login.LoginController', {
                 {
                     console.log("wrong username or password!!");
                 }
-            },
+                },
 
-            failure: function (response, opts)
-            {
-            }
+                failure: function (response, opts)
+                {
+                    //TODO wrong user pass
+                }
         });
     }
-
-    // onLoginClick: function ()
-    // {
-    //     // Set the localStorage value to true
-    //     localStorage.setItem("loggedIn", true);
-    //
-    //     // Remove Login Window
-    //     this.getView().destroy();
-    //
-    //     // Add the main view to the viewport
-    //     Ext.create({
-    //         xtype: 'app-main'
-    //     });
-    // }
 });
