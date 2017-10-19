@@ -20,7 +20,7 @@ Ext.define('CEPLFront.model.Register', {
 
     proxy: {
         type: 'rest',
-        url: 'http://192.168.110.103:8080/bimehtech/api/register',
+        url: 'http://192.168.43.142:8080/bimehtech/api/register',
         noCache: false
     }
 

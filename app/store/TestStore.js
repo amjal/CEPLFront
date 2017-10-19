@@ -4,8 +4,9 @@
 Ext.define('CEPLFront.store.TestStore', {
     extend: 'Ext.data.Store',
     alias: 'store.mobile-os',
+    model: 'CEPLFront.model.TestModel',
 
-    fields: ['os', 'data1' ],
+    //fields: ['os', 'data1' ],
     data: [
         { os: 'Android', data1: 61.3 },
         { os: 'BlackBerry', data1: 8.7 },
