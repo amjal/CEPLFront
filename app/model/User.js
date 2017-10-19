@@ -10,7 +10,7 @@ Ext.define('CEPLFront.model.User', {
         {name: 'tripDate' , type: 'date'},
         {name: 'tripPeriod' , type: 'float'},
         {name: 'aveSpeed' , type: 'float'},
-        {name: 'distance' , type: 'double'},
+        {name: 'distance' , type: 'float'},
         {name: 'road' , type: 'string'},
         {name: 'violationTime' , type: 'date'},
         {name: 'weather' , type: 'string'}
