@@ -39,7 +39,7 @@ Ext.define('CEPLFront.view.chart.Chart', {
             }
         },
         width: '100%',
-        height: 500,
+        height: 100,
         innerPadding: 20,
         store: {
             type: 'mobile-os'

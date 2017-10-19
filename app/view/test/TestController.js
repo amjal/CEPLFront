@@ -28,8 +28,9 @@ Ext.define('CEPLFront.view.test.TestController', {
 
        var model = Ext.create('CEPLFront.model.Register',{userName: username, national_id: nationalid, passWord: password
            , gender: gen, certificateYear: certificateyear, birthDate: birthdate, education: educate, job: work, email: emailid}) ;
+        console.log(model);
+       model.save();
 
-       console.log(model);
     }
 
 });
