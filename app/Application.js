@@ -18,8 +18,7 @@ Ext.define('CEPLFront.Application', {
         // any type of storage, i.e., Cookies, LocalStorage, etc.
 
         // Check to see the current value of the localStorage key
-        var loggedIn = localStorage.getItem("loggedIn");
-        alert(loggedIn);
+        var loggedIn = localStorage.getItem('loggedIn');
         // This ternary operator determines the value of the TutorialLoggedIn key.
         // If TutorialLoggedIn isn't true, we display the login window,
         // otherwise, we display the main view

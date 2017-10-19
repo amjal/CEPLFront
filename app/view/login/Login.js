@@ -10,10 +10,8 @@ Ext.define('CEPLFront.view.login.Login', {
         'CEPLFront.view.login.LoginController',
         'Ext.form.Panel',
         'Ext.form.field.Text',
-        'Ext.plugin.Viewport'
     ],
 
-    // plugins: 'viewport',
 
     controller: 'login',
     bodyPadding: 10,
