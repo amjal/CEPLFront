@@ -20,7 +20,6 @@ Ext.define('CEPLFront.view.insuredSearch.InsuredSearchController', {
             Ext.getCmp('insuredSearchId').add(list);
             CEPLFront.view.insuredSearch.InsuredSearchController.showingGrid = true;
         }else{
-            store.load('')
         }
 
 
