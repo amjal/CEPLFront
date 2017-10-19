@@ -37,8 +37,8 @@ Ext.define('CEPLFront.view.ranking.Ranking', {
                         type: 'insured'
                     },
                     columns: [
-                        { text: 'Name', dataIndex: 'userName' , flex: 1 },
-                        { text: 'Gender', dataIndex: 'gender', flex: 1 }
+                        { text: 'اسم', dataIndex: 'userName' , flex: 1 },
+                        { text: 'جنسیت', dataIndex: 'gender', flex: 1 }
                     ],
                     height: 300,
                     width: 1000,

@@ -3,22 +3,15 @@ Ext.define('CEPLFront.model.User', {
     xtype: 'userModel',
 
     fields: [
-        {name: 'userName' , type: 'string'},
-        {name: 'ID' , type: 'int'},
-        {name: 'birthDate' , type: 'date'},
-        {name: 'gender' , type: 'string'},
-        {name: 'tripDate' , type: 'date'},
-        {name: 'tripPeriod' , type: 'float'},
-        {name: 'aveSpeed' , type: 'float'},
-        {name: 'distance' , type: 'float'},
-        {name: 'road' , type: 'string'},
-        {name: 'violationTime' , type: 'date'},
-        {name: 'weather' , type: 'string'}
+        {name: 'certificateYear' , type: 'date'},
+        {name: 'email' , type: 'string'},
+        {name: 'educationGrade' , type: 'float'},
+        {name: 'nationalid' , type: 'string'}
     ],
 
     proxy: {
         type: 'rest',
-        url : 'http://192.168.43.142:8080/bimehtech/api/getMonthWeather',
+        url : 'http://192.168.43.142:8080/bimehtech/api/getAllUser',
         reader:{
             type:'json'
         },
