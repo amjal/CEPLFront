@@ -11,11 +11,13 @@ Ext.define('CEPLFront.view.test.TestController', {
     /**
      * Called when the view is created
      */
-    init: function() {
+    init: function ()
+    {
 
     },
 
-    onRegisterClick: function () {
+    onRegisterClick: function ()
+    {
         var username = this.lookupReference('userName').getValue();
         var password = this.lookupReference('passWord').getValue();
         var nationalid = this.lookupReference('national_id').getValue();
@@ -26,10 +28,18 @@ Ext.define('CEPLFront.view.test.TestController', {
         var certificateyear = this.lookupReference('certificate_year').getValue();
         var birthdate = this.lookupReference('birth_date').getValue();
 
-       var model = Ext.create('CEPLFront.model.Register',{userName: username, national_id: nationalid, passWord: password
-           , gender: gen, certificateYear: certificateyear, birthDate: birthdate, education: educate, job: work, email: emailid}) ;
-        console.log(model);
-       model.save();
+        var model = Ext.create('CEPLFront.model.Register', {
+            userName: username,
+            national_id: nationalid,
+            passWord: password,
+            gender: gen,
+            certificateYear: certificateyear,
+            birthDate: birthdate,
+            education: educate,
+            job: work,
+            email: emailid
+        });
+        model.save();
 
     }
 

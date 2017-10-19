@@ -102,6 +102,6 @@ Ext.define('CEPLFront.view.main.Main', {
     }, {
         title: 'نمودار',
         iconCls: 'fa-area-chart',
-        xtype: 'pie-donut'
+        xtype: 'weatherChart'
     }]
 });

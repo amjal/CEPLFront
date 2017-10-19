@@ -14,5 +14,14 @@ Ext.define('CEPLFront.model.User', {
         {name: 'road' , type: 'string'},
         {name: 'violationTime' , type: 'date'},
         {name: 'weather' , type: 'string'}
-    ]
+    ],
+
+    proxy: {
+        type: 'rest',
+        url : 'http://192.168.43.142:8080/bimehtech/api/getMonthWeather',
+        reader:{
+            type:'json'
+        },
+        noCache:true
+    }
 });

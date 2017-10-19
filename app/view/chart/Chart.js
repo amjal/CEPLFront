@@ -3,10 +3,10 @@
  */
 Ext.define('CEPLFront.view.chart.Chart', {
     extend: 'Ext.Panel',
-    xtype: 'pie-donut',
+    xtype: 'weatherChart',
 
     requires: [
-        'CEPLFront.store.TestStore',
+        'CEPLFront.store.WeatherStore',
         'CEPLFront.view.chart.ChartController',
         'Ext.chart.PolarChart',
         'Ext.chart.interactions.ItemHighlight',
@@ -14,6 +14,7 @@ Ext.define('CEPLFront.view.chart.Chart', {
         'Ext.chart.series.Pie',
         'Ext.toolbar.Fill'
     ],
+
 
     controller: 'chartController',
 
@@ -39,10 +40,10 @@ Ext.define('CEPLFront.view.chart.Chart', {
             }
         },
         width: '100%',
-        height: 100,
+        height: 500,
         innerPadding: 20,
         store: {
-            type: 'mobile-os'
+            type: 'weather'
         },
         legend: {
             docked: 'bottom'
@@ -50,10 +51,10 @@ Ext.define('CEPLFront.view.chart.Chart', {
         interactions: ['rotate', 'itemhighlight'],
         series: [{
             type: 'pie',
-            angleField: 'data1',
+            angleField: 'percent',
             donut: 50,
             label: {
-                field: 'os',
+                field: 'weatherName',
                 display: 'outside'
             },
             highlight: true,
