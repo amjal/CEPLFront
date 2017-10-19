@@ -13,12 +13,12 @@ Ext.define('CEPLFront.view.main.Main', {
     plugins: 'viewport',
 
     requires: [
-        'Ext.plugin.Viewport',
-        'Ext.window.MessageBox',
-
+        'CEPLFront.view.chart.Chart',
+        'CEPLFront.view.main.List',
         'CEPLFront.view.main.MainController',
         'CEPLFront.view.main.MainModel',
-        'CEPLFront.view.main.List'
+        'Ext.plugin.Viewport',
+        'Ext.window.MessageBox'
     ],
 
     controller: 'main',
@@ -39,13 +39,7 @@ Ext.define('CEPLFront.view.main.Main', {
             },
             flex: 0
         },
-        iconCls: 'fa-th-list',
-        items: [{
-            xtype: 'button',
-            text: 'خروج',
-            align: 'right',
-            handler: 'onLogoutButton'
-        }]
+        iconCls: 'fa-th-list'
     },
 
     tabBar: {
@@ -96,5 +90,9 @@ Ext.define('CEPLFront.view.main.Main', {
         title: 'تست...',
         iconCls: 'fa-tint',
         xtype: 'test'
+    }, {
+        title: 'نمودار',
+        iconCls: 'fa-area-chart',
+        xtype: 'pie-donut'
     }]
 });
