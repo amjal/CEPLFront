@@ -8,7 +8,7 @@ Ext.define('CEPLFront.model.UserLoginModel', {
 
     proxy: {
         type: 'rest',
-        url : '',
+        url : 'http://192.168.43.142:8080/api/login',
         reader:{
             type:'json'
         },

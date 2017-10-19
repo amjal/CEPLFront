@@ -5,6 +5,10 @@ Ext.define('CEPLFront.view.login.LoginController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.login',
 
+    requires: [
+        'CEPLFront.model.UserLoginModel'
+    ],
+
     onLoginClick: function ()
     {
         var loginModel=Ext.create('CEPLFront.model.UserLoginModel',{
