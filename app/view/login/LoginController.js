@@ -14,8 +14,8 @@ Ext.define('CEPLFront.view.login.LoginController', {
 
             params: {
                 ajax_req: Ext.util.JSON.encode({
-                    username: 'test',
-                    password: 'test',
+                    username: Ext.getCmp('userField').value,
+                    password: Ext.getCmp('passField').value,
                     role: "user"
                 })
             },
@@ -44,8 +44,6 @@ Ext.define('CEPLFront.view.login.LoginController', {
 
             failure: function (response, opts)
             {
-                // console.log('server-side failure with status code ' + response.status);
-                console.log("error!");
             }
         });
     }

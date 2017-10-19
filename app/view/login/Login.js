@@ -29,11 +29,13 @@ Ext.define('CEPLFront.view.login.Login', {
         items: [{
             xtype: 'textfield',
             name: 'username',
+            id:'userField',
             fieldLabel: 'نام کاربری',
             allowBlank: false
         }, {
             xtype: 'textfield',
             name: 'password',
+            id:'passField',
             inputType: 'password',
             fieldLabel: 'رمز عبور',
             allowBlank: false

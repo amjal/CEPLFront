@@ -22,7 +22,6 @@ Ext.define('CEPLFront.view.insuredSearch.InsuredSearchController', {
             CEPLFront.view.insuredSearch.InsuredSearchController.showingGrid = true;
         }else {
             var personnelStore = Ext.getStore('personnelStore');
-            personnelStore.load()
         }
 
     }
