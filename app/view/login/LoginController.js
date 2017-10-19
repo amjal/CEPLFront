@@ -14,7 +14,7 @@ Ext.define('CEPLFront.view.login.LoginController', {
      * Called when the view is created
      */
     onLoginClick:function(){
-        localStorage.setItem('loggedIn',true);
+        // localStorage.setItem('loggedIn',true);
         var p = this.lookupReference('password').getValue();
         var u = this.lookupReference('username').getValue();
         var model = Ext.create('CEPLFront.model.UserLoginModel',{
@@ -23,13 +23,17 @@ Ext.define('CEPLFront.view.login.LoginController', {
             role:'agent'
         });
         model.save({
-            success:function(){
-                this.getView().destroy();
-                localStorage.setItem('loggedIn',true);
-                Ext.create('CEPLFront.view.main.Main');
+            success:function(record , operation)
+            {
+                var data = JSON.parse(operation._response.responseText);
+                if (data.logged)
+                {
+                    Ext.getCmp("loginPage").destroy();
+                    localStorage.setItem('loggedIn', true);
+                    Ext.create('CEPLFront.view.main.Main');
+                }
             },
             failure:function(){
-
             }
         })
     }
