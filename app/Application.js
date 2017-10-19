@@ -13,7 +13,6 @@ Ext.define('CEPLFront.Application', {
     ],
 
     launch: function () {
-
         // It's important to note that this type of application could use
         // any type of storage, i.e., Cookies, LocalStorage, etc.
 

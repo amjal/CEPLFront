@@ -4,7 +4,9 @@
 Ext.define('CEPLFront.view.insuredSearch.InsuredSearchController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.insuredsearch',
-
+    statics:{
+        showingGrid:false
+    },
     requires: [
         'CEPLFront.view.main.List'
     ],
@@ -13,6 +15,14 @@ Ext.define('CEPLFront.view.insuredSearch.InsuredSearchController', {
      * Called when the view is created
      */
     searchClicked:function(){
-        Ext.create('CEPLFront.view.main.List');
+        if(!CEPLFront.view.insuredSearch.InsuredSearchController.showingGrid) {
+            var list = Ext.create('CEPLFront.view.main.List');
+            Ext.getCmp('insuredSearchId').add(list);
+            CEPLFront.view.insuredSearch.InsuredSearchController.showingGrid = true;
+        }else{
+            store.load('')
+        }
+
+
     }
 });

@@ -3,20 +3,26 @@
  */
 //TODO model alias
 Ext.define('CEPLFront.view.insuredSearch.InsuredSearch', {
-    extend: 'Ext.Container',
+    extend: 'Ext.panel.Panel',
 
     requires: [
         'CEPLFront.view.insuredSearch.InsuredSearchModel',
 		'CEPLFront.view.insuredSearch.InsuredSearchController',
-        'Ext.layout.container.Absolute',
+        'Ext.layout.container.VBox',
         'Ext.rtl.*'
     ],
-    layout:'absolute',
+    layout: {
+        type:'vbox',
+        pack: 'start',
+        align: 'stretch'
+    },
     xtype: 'insuredSearch',
+    id:'insuredSearchId',
     rtl:true,
 
     controller: 'insuredsearch',
 
+    bodyPadding:10,
     items: [{
         title: "جست و جوی بیمه گذار",
         x: 50,
