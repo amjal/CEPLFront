@@ -4,20 +4,15 @@ Ext.define('CEPLFront.store.InsuredStore', {
     alias: 'store.insured',
     model: 'CEPLFront.model.User',
 
-    // data: [
-    //     { userName: 'عباس' , gender: 'مرد'},
-    //     { userName: 'سکینه' , gender: 'زن'},
-    //     { userName: 'اصغر' , gender: 'مرد'}
-    // ]
-
     proxy: {
         type: 'rest',
-        url : 'http://192.168.110.103:8080/bimehtech/api/getAlltrips',
+        url : 'http://192.168.43.142:8080/bimehtech/api/getAllUser',
         noCache: false,
         reader: {
-            type: 'json',
-            rootProperty: 'users'
+            type: 'json'
         }
-    }
+    },
+
+    autoLoad: true,
 
 });
