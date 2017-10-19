@@ -17,6 +17,7 @@ Ext.define('CEPLFront.view.main.Main', {
         'CEPLFront.view.main.List',
         'CEPLFront.view.main.MainController',
         'CEPLFront.view.main.MainModel',
+        'Ext.button.Button',
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox'
     ],
@@ -39,7 +40,15 @@ Ext.define('CEPLFront.view.main.Main', {
             },
             flex: 0
         },
-        iconCls: 'fa-th-list'
+        iconCls: 'fa-th-list',
+        items: [{
+            xtype: 'button',
+            text: 'خروج',
+            align: 'right',
+            margin: '10 0',
+            padding: '1 30',
+            handler: 'onLogoutButton'
+        }]
     },
 
     tabBar: {
