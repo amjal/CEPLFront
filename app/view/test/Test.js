@@ -33,6 +33,7 @@ Ext.define('CEPLFront.view.test.Test', {
     },
 
 
+
     items: [
         /* include child components here */
         {

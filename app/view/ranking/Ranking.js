@@ -24,7 +24,7 @@ Ext.define('CEPLFront.view.ranking.Ranking', {
         /* include child components here */
         {
             xtype: 'fieldset',
-            title: 'Rankings',
+            title: 'رتبه بندی ها',
             items: [
                 {
                     xtype: 'grid',
