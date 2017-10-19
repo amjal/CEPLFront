@@ -6,15 +6,16 @@ Ext.define('CEPLFront.view.login.LoginController', {
     alias: 'controller.login',
 
     requires: [
-        'CEPLFront.model.UserLoginModel'
+        'CEPLFront.model.UserLoginModel',
+        'CEPLFront.view.main.Main'
     ],
-
-    onLoginClick: function ()
-    {
-        var loginModel=Ext.create('CEPLFront.model.UserLoginModel',{
-            username: Ext.getCmp('userField').value,
-            password: Ext.getCmp('passField').value,
-            role: "agent"
+    onLoginClick: function () {
+        /*var u = this.lookupReference('username').getValue();
+        var p = this.lookupReference('password').getValue();
+        var loginModel = Ext.create('CEPLFront.model.UserLoginModel',{
+            username:u,
+            password:p,
+            role: 'agent'
         });
         loginModel.save({
                 success: function (response, opts) {
@@ -41,6 +42,11 @@ Ext.define('CEPLFront.view.login.LoginController', {
                 {
                     //TODO wrong user pass
                 }
+        });*/
+        Ext.getCmp('loginPage').destroy();
+        Ext.create({
+            xtype: 'app-main'
         });
+        
     }
 });
