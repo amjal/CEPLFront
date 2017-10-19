@@ -14,7 +14,7 @@ Ext.define('CEPLFront.view.main.List', {
     },
 
     columns: [
-        { text: 'Name',  dataIndex: 'name' },
+        { text: 'نام',  dataIndex: 'name' },
         { text: 'Email', dataIndex: 'email', flex: 1 },
         { text: 'Phone', dataIndex: 'phone', flex: 1 }
     ],

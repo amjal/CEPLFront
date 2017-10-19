@@ -3,9 +3,12 @@ Ext.define('CEPLFront.store.Personnel', {
 
     alias: 'store.personnel',
 
-    fields: [
-        'name', 'email', 'phone'
+    requires: [
+        'CEPLFront.model.Person'
     ],
+
+    model:'CEPLFront.model.Person',
+    storeId:'personnelStore',
 
     data: { items: [
         { name: 'Jean Luc', email: "jeanluc.picard@enterprise.com", phone: "555-111-1111" },
@@ -15,7 +18,8 @@ Ext.define('CEPLFront.store.Personnel', {
     ]},
 
     proxy: {
-        type: 'memory',
+        type: 'rest',
+        url:'personnel.json',
         reader: {
             type: 'json',
             rootProperty: 'items'

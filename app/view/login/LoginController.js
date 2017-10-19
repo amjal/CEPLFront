@@ -66,4 +66,8 @@ Ext.define('CEPLFront.view.login.LoginController', {
     //         xtype: 'app-main'
     //     });
     // }
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> dc2ad05d07cabffae507100f592cd0873400de44
