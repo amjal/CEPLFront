@@ -6,16 +6,22 @@
 Ext.define('CEPLFront.Application', {
     extend: 'Ext.app.Application',
 
+    requires: [
+        'CEPLFront.view.login.Login',
+        'CEPLFront.view.main.Main'
+    ],
+
     name: 'TutorialApp',
     stores: [
         // TODO: add global / shared stores here
     ],
     launch: function () {
         var loggedIn = localStorage.getItem("loggedIn");
-        alert(loggedIn);
-        Ext.create({
-            xtype: loggedIn ? 'app-main' : 'login'
-        });
+
+        if (loggedIn == "true")
+            Ext.create('CEPLFront.view.main.Main');
+        else
+            Ext.create('CEPLFront.view.login.Login');
     }
 });
 
