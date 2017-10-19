@@ -4,6 +4,7 @@
 Ext.define('CEPLFront.view.main.List', {
     extend: 'Ext.grid.Panel',
     xtype: 'mainlist',
+    id:'searchListId',
     requires: [
         'CEPLFront.store.Personnel',
         'Ext.plugin.Viewport'

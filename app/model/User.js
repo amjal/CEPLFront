@@ -9,5 +9,4 @@ Ext.define('CEPLFront.model.User', {
         {name: 'gender' , type: 'string'},
         {name: 'certificateYear' , type: 'date'}
     ]
-
 });

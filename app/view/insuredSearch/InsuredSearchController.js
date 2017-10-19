@@ -8,6 +8,7 @@ Ext.define('CEPLFront.view.insuredSearch.InsuredSearchController', {
         showingGrid:false
     },
     requires: [
+        'CEPLFront.store.Personnel',
         'CEPLFront.view.main.List'
     ],
 
@@ -19,9 +20,10 @@ Ext.define('CEPLFront.view.insuredSearch.InsuredSearchController', {
             var list = Ext.create('CEPLFront.view.main.List');
             Ext.getCmp('insuredSearchId').add(list);
             CEPLFront.view.insuredSearch.InsuredSearchController.showingGrid = true;
-        }else{
+        }else {
+            var personnelStore = Ext.getStore('personnelStore');
+            personnelStore.load()
         }
-
 
     }
 });

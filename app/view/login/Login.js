@@ -4,6 +4,7 @@
 Ext.define('CEPLFront.view.login.Login', {
     extend: 'Ext.window.Window',
     xtype: 'login',
+    id:'loginPage',
 
     requires: [
         'CEPLFront.view.login.LoginController',

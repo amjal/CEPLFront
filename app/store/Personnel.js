@@ -2,6 +2,7 @@ Ext.define('CEPLFront.store.Personnel', {
     extend: 'Ext.data.Store',
 
     alias: 'store.personnel',
+    storeId:'personnelStore',
 
     requires: [
         'CEPLFront.model.Person'
