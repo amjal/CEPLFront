@@ -9,6 +9,10 @@ Ext.define('CEPLFront.view.main.MainController', {
 
     alias: 'controller.main',
 
+    requires: [
+        'CEPLFront.view.login.Login'
+    ],
+
     onItemSelected: function (sender, record) {
         Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
     },
