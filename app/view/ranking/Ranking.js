@@ -6,7 +6,10 @@ Ext.define('CEPLFront.view.ranking.Ranking', {
 
     requires: [
         'CEPLFront.view.ranking.RankingModel',
-		'CEPLFront.view.ranking.RankingController'
+		'CEPLFront.view.ranking.RankingController',
+        'CEPLFront.store.InsuredStore',
+        'Ext.data.StoreManager',
+        'Ext.grid.Panel'
     ],
 
     xtype: 'ranking',
@@ -19,5 +22,28 @@ Ext.define('CEPLFront.view.ranking.Ranking', {
 
     items: [
         /* include child components here */
+        {
+            xtype: 'fieldset',
+            title: 'Rankings',
+            items: [
+                {
+                    xtype: 'grid',
+                    // store: Ext.data.StoreManager.lookup('insuredStore'),
+                    scrollable: true,
+                    frame: true,
+                    store: {
+                        type: 'insured'
+                    },
+                    columns: [
+                        { text: 'Name', dataIndex: 'userName' , flex: 2 },
+                        { text: 'Gender', dataIndex: 'gender', flex: 1 },
+                        { text: 'BirthDay', dataIndex: 'birthDate' , flex: 3 }
+                    ],
+                    height: 300,
+                    width: 1000
+                }
+            ]
+        }
+
     ]
 });

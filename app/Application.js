@@ -25,7 +25,6 @@ Ext.define('CEPLFront.Application', {
         Ext.create({
             xtype: loggedIn ? 'app-main' : 'login'
         });
-
     },
 
     onAppUpdate: function () {
