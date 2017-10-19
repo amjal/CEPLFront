@@ -39,7 +39,13 @@ Ext.define('CEPLFront.view.main.Main', {
             },
             flex: 0
         },
-        iconCls: 'fa-th-list'
+        iconCls: 'fa-th-list',
+        items: [{
+            xtype: 'button',
+            text: 'خروج',
+            align: 'right',
+            handler: 'onLogoutButton'
+        }]
     },
 
     tabBar: {
