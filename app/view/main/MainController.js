@@ -21,7 +21,7 @@ Ext.define('CEPLFront.view.main.MainController', {
 
     onLogoutButton: function () {
         // Remove the localStorage key/value
-        localStorage.removeItem('TutorialLoggedIn');
+        localStorage.setItem('loggedIn',false);
 
         // Remove Main View
         this.getView().destroy();

@@ -14,6 +14,7 @@ Ext.define('CEPLFront.view.login.LoginController', {
      * Called when the view is created
      */
     onLoginClick:function(){
+        localStorage.setItem('loggedIn',true);
         var p = this.lookupReference('password').getValue();
         var u = this.lookupReference('username').getValue();
         var model = Ext.create('CEPLFront.model.UserLoginModel',{
