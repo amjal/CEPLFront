@@ -62,7 +62,7 @@ Ext.define('CEPLFront.view.test.Test', {
                 items: [
                     { allowBlank:false, fieldLabel: 'نام کاربری', name: 'userName', emptyText: 'user id', reference: 'userName' },
                     { allowBlank:false, fieldLabel: 'رمز عبور', name: 'passWord', emptyText: 'password', reference: 'passWord', inputType: 'password' },
-                    { allowBlank:false, fieldLabel: 'National ID', name: 'national_id', reference: 'national_id', emptyText: 'national id' }
+                    { allowBlank:false, fieldLabel: 'کد ملی', name: 'national_id', reference: 'national_id', emptyText: 'national id' }
                 ]
             }, {
                 xtype: 'fieldset',
