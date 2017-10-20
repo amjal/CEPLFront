@@ -97,5 +97,9 @@ Ext.define('CEPLFront.view.main.Main', {
         title: 'نمودار',
         iconCls: 'fa-area-chart',
         xtype: 'weatherChart'
+    }, {
+        title: 'آنالیز ماهانه',
+        iconCls: 'fa-bar-chart',
+        xtype: 'mothana'
     }]
 });

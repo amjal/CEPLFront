@@ -1,0 +1,33 @@
+{
+  "countDayOfMonth": "1",
+  "countAllDay": 4,
+  "drivingTime": "1000",
+  "averageSpeed": "45",
+  "distance": "12",
+  "violationTime": "2000",
+  "month": "1396-07",
+  "weather": [
+    {
+      "weatherName": "rainy",
+      "percent": 25
+    },
+    {
+      "weatherName": "sunny",
+      "percent": 25
+    },
+    {
+      "weatherName": "snowy",
+      "percent": 25
+    },
+    {
+      "weatherName": "cloudy",
+      "percent": 25
+    }
+  ],
+  "road": {
+    "1": 0.25,
+    "2": 0.25,
+    "3": 0.25,
+    "4": 0.25
+  }
+}
