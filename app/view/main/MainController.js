@@ -18,7 +18,6 @@ Ext.define('CEPLFront.view.main.MainController', {
             //
         }
     },
-
     onLogoutButton: function () {
         // Remove the localStorage key/value
         localStorage.setItem('loggedIn',false);
