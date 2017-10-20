@@ -10,6 +10,7 @@ Ext.define('CEPLFront.model.DailyModel', {
         "averageSpeed",
         "distance",
         "violationTime",
-        "date"
+        "date",
+        "point"
     ]
 });

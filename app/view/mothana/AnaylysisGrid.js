@@ -18,6 +18,7 @@ Ext.define('CEPLFront.view.mothana.AnaylysisGrid', {
         {text:'سرعت متوسط', dataIndex:"averageSpeed", flex:1},
         {text:'مسافت طی شده', dataIndex:"distance", flex:1},
         {text:'زمان تخلف', dataIndex:"violationTime", flex:1},
-        {text:'ماه', dataIndex:"month", flex:1}
+        {text:'ماه', dataIndex:"month", flex:1},
+        {text:'امتیاز', dataIndex:"point", flex:1},
     ]
 });

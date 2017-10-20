@@ -18,6 +18,7 @@ Ext.define('CEPLFront.view.daily.DailyGrid', {
         {text:'سرعت متوسط', dataIndex:"averageSpeed", flex:1},
         {text:'مسافت طی شده', dataIndex:"distance", flex:1},
         {text:'زمان تخلف', dataIndex:"violationTime", flex:1},
-        {text:'تاریخ', dataIndex:"date", flex:1}
+        {text:'تاریخ', dataIndex:"date", flex:1},
+        {text:'امتیاز', dataIndex:"point", flex:1}
     ]
 });

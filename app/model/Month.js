@@ -11,7 +11,8 @@ Ext.define('CEPLFront.model.Month', {
         "averageSpeed",
         "distance",
         "violationTime",
-        "month"
+        "month",
+        "point"
     ]
 
 });
