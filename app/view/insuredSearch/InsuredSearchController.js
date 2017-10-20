@@ -12,9 +12,7 @@ Ext.define('CEPLFront.view.insuredSearch.InsuredSearchController', {
         'CEPLFront.view.main.List'
     ],
 
-    /**
-     * Called when the view is created
-     */
+
     searchClicked:function(){
         if(!CEPLFront.view.insuredSearch.InsuredSearchController.showingGrid) {
             var list = Ext.create('CEPLFront.view.main.List');

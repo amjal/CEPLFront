@@ -8,9 +8,7 @@ Ext.define('CEPLFront.view.test.TestController', {
     requires: [
         'CEPLFront.model.Register'
     ],
-    /**
-     * Called when the view is created
-     */
+
     init: function ()
     {
 

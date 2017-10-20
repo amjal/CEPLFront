@@ -13,10 +13,7 @@ Ext.define('CEPLFront.view.test.Test', {
         'Ext.panel.Panel'
     ],
 
-    /*
-    Uncomment to give this component an xtype
-    xtype: 'test',
-    */
+
 
     controller: 'test',
 
@@ -35,7 +32,6 @@ Ext.define('CEPLFront.view.test.Test', {
 
 
     items: [
-        /* include child components here */
         {
             xtype: 'panel',
             frame: true,
