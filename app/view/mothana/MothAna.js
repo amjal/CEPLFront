@@ -22,6 +22,9 @@ Ext.define('CEPLFront.view.mothana.MothAna', {
 
     items: [
         {
+            xtype:'analysisGrid',
+        },
+        {
             xtype: "button",
             html:'نمایش',
             handler: function() {
@@ -35,9 +38,6 @@ Ext.define('CEPLFront.view.mothana.MothAna', {
                 }
             });
             }
-        },
-        {
-            xtype:'analysisGrid',
         }
     ]
 });

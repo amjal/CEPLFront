@@ -13,11 +13,11 @@ Ext.define('CEPLFront.view.mothana.AnaylysisGrid', {
         type:'analysisStore'
     },
     columns:[
-        {text:'تعداد روز های رانندگی در ماه', dataIndex:"countDayOfMonth"},
-        {text:'تعداد کل روز های رانندگی', dataIndex:"countAllDay"},
-        {text:'سرعت متوسط', dataIndex:"averageSpeed"},
-        {text:'مسافت طی شده', dataIndex:"distance"},
-        {text:'زمان تخلف', dataIndex:"violationTime"},
-        {text:'ماه', dataIndex:"month"}
+        {text:'تعداد روز های رانندگی در ماه', dataIndex:"countDayOfMonth", flex: 2},
+        {text:'تعداد کل روز های رانندگی', dataIndex:"countAllDay", flex:2},
+        {text:'سرعت متوسط', dataIndex:"averageSpeed", flex:1},
+        {text:'مسافت طی شده', dataIndex:"distance", flex:1},
+        {text:'زمان تخلف', dataIndex:"violationTime", flex:1},
+        {text:'ماه', dataIndex:"month", flex:1}
     ]
 });

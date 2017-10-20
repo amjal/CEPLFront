@@ -1,17 +1,15 @@
 /**
  * Created by sarb on 10/20/17.
  */
-Ext.define('CEPLFront.model.Month', {
+Ext.define('CEPLFront.model.DailyModel', {
     extend: 'Ext.data.Model',
 
     fields: [
-        "countDayOfMonth",
-        "countAllDay",
+        "count",
         "drivingTime",
         "averageSpeed",
         "distance",
         "violationTime",
-        "month"
+        "date"
     ]
-
 });

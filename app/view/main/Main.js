@@ -8,9 +8,14 @@ Ext.define('CEPLFront.view.main.Main', {
 
     requires: [
         'CEPLFront.view.chart.Chart',
+        'CEPLFront.view.daily.Daily',
+        'CEPLFront.view.insuredSearch.InsuredSearch',
         'CEPLFront.view.main.List',
         'CEPLFront.view.main.MainController',
         'CEPLFront.view.main.MainModel',
+        'CEPLFront.view.mothana.MothAna',
+        'CEPLFront.view.ranking.Ranking',
+        'CEPLFront.view.test.Test',
         'Ext.button.Button',
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox'
@@ -101,5 +106,9 @@ Ext.define('CEPLFront.view.main.Main', {
         title: 'آنالیز ماهانه',
         iconCls: 'fa-bar-chart',
         xtype: 'mothana'
+    }, {
+        title: 'آنالیز روزانه',
+        iconCls: 'fa-bar-chart',
+        xtype: 'dailyView'
     }]
 });
