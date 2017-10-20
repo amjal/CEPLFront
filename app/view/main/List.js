@@ -9,15 +9,18 @@ Ext.define('CEPLFront.view.main.List', {
         'CEPLFront.store.Personnel',
         'Ext.plugin.Viewport'
     ],
-
     store: {
         type: 'personnel'
     },
-
     columns: [
-        { text: 'نام',  dataIndex: 'name' },
-        { text:'ایمیل', dataIndex: 'email', flex: 1 },
-        { text: 'شماره تلفن', dataIndex: 'phone', flex: 1 }
+        { text: 'شناسه',  dataIndex: 'id' },
+        { text:'نام کاربری', dataIndex: 'username', flex: 1 },
+        { text: 'تاریخ تولد', dataIndex: 'birthDate', flex: 1 },
+        { text: 'جنسیت', dataIndex: 'gender', flex: 1 },
+        { text: 'تاریخ صدور', dataIndex: 'certificateYear', flex: 1 },
+        { text: 'ایمیل', dataIndex: 'email', flex: 1 },
+        { text: 'تحصیلات', dataIndex: 'education', flex: 1 },
+        { text: 'شماره ملی', dataIndex: 'nationalid', flex: 1 }
     ],
 
     listeners: {

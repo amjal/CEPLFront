@@ -1,6 +1,5 @@
 Ext.define('CEPLFront.store.InsuredStore', {
     extend: 'Ext.data.Store',
-    //storeId: 'insuredStore',
     alias: 'store.insured',
 
     requires: [
@@ -16,9 +15,9 @@ Ext.define('CEPLFront.store.InsuredStore', {
         noCache: false,
         reader: {
             type: 'json'
+
         }
     },
-
-    autoLoad: true,
+    autoLoad: true
 
 });

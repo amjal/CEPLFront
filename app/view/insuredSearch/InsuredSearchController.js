@@ -8,19 +8,23 @@ Ext.define('CEPLFront.view.insuredSearch.InsuredSearchController', {
         showingGrid:false
     },
     requires: [
-        'CEPLFront.store.Personnel',
         'CEPLFront.view.main.List'
     ],
-
 
     searchClicked:function(){
         if(!CEPLFront.view.insuredSearch.InsuredSearchController.showingGrid) {
             var list = Ext.create('CEPLFront.view.main.List');
             Ext.getCmp('insuredSearchId').add(list);
             CEPLFront.view.insuredSearch.InsuredSearchController.showingGrid = true;
-        }else {
-            var personnelStore = Ext.getStore('personnelStore');
         }
-
+        var store = Ext.getStore('personnelStore');
+        Ext.Ajax.request({
+            url: 'http://192.168.110.103:8080/bimehtech/api/getAllUser',
+            success: function(){
+                store.load();
+            },
+            failure: function(){
+            }
+        });
     }
 });
