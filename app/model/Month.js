@@ -14,13 +14,4 @@ Ext.define('CEPLFront.model.Month', {
         "month"
     ],
 
-    proxy: {
-        type: 'rest',
-        url : 'http://192.168.110.103:8080/bimehtech/api/analyzeMonth',
-        reader:{
-            type:'json'
-        },
-        noCache:true
-    }
-
 });

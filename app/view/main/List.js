@@ -6,8 +6,7 @@ Ext.define('CEPLFront.view.main.List', {
     xtype: 'mainlist',
     id:'searchListId',
     requires: [
-        'CEPLFront.store.Personnel',
-        'Ext.plugin.Viewport'
+        'CEPLFront.store.Personnel'
     ],
     store: {
         type: 'personnel'

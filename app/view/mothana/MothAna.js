@@ -6,6 +6,7 @@ Ext.define('CEPLFront.view.mothana.MothAna', {
 
     requires: [
         'CEPLFront.model.Month',
+        'CEPLFront.view.mothana.AnaylysisGrid',
         'CEPLFront.view.mothana.MothAnaController',
         'CEPLFront.view.mothana.MothAnaModel',
         'Ext.button.Button'
@@ -22,22 +23,21 @@ Ext.define('CEPLFront.view.mothana.MothAna', {
     items: [
         {
             xtype: "button",
+            html:'نمایش',
             handler: function() {
-                var modell = Ext.create('CEPLFront.model.Month');
-
-                modell.load({
-                    failure: function(record, operation) {
-                        // do something if the load failed
-                    },
-                    success: function(record, operation) {
-                        var obj = JSON.parse(operation._response.responseText);
-                        console.log(obj);
-                    },
-                    callback: function(record, operation, success) {
-                        // do something whether the load succeeded or failed
-                    }
-                });
+                var store = Ext.getStore('analysisStoreId');
+                Ext.Ajax.request({
+                    url : 'http://192.168.110.103:8080/bimehtech/api/analyzeMonth',
+                success: function(){
+                    store.load();
+                },
+                failure: function(){
+                }
+            });
             }
+        },
+        {
+            xtype:'analysisGrid',
         }
     ]
 });
