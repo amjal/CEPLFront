@@ -37,6 +37,8 @@ Ext.define('CEPLFront.view.test.TestController', {
             job: work,
             email: emailid
         });
+
+        console.log(model);
         model.save();
 
     }

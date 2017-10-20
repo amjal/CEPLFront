@@ -10,7 +10,8 @@ Ext.define('CEPLFront.view.test.Test', {
     requires: [
         'CEPLFront.view.test.TestModel',
 		'CEPLFront.view.test.TestController',
-        'Ext.panel.Panel'
+        'Ext.panel.Panel',
+        'Ext.data.ArrayStore'
     ],
 
 
@@ -81,16 +82,33 @@ Ext.define('CEPLFront.view.test.Test', {
                     fieldLabel: 'تحصیلات',
                     name: 'education',
                     reference: 'education'
-                },{
-                    xtype: 'radiogroup',
-                    fieldLabel: 'جنسیت',
-                    name: 'gender',
-                    reference: 'gender',
-                    items: [
-                        {boxLabel: 'مرد', inputValue: 'man' },
-                        {boxLabel: 'زن', inputValue: 'woman'}
-                    ]
                 }, {
+                    xtype: 'combobox',
+                    name: 'gender',
+                    fieldLabel: 'جنسیت',
+                    store: new Ext.data.SimpleStore({
+                        data: [
+                            ['female', 'زن'],
+                            ['male', 'مرد']
+                        ],
+                        id: 0,
+                        fields: ['value', 'text']
+                    }),
+                    valueField: 'value',
+                    reference: 'gender',
+                    allowBlank: false
+                }
+                // ,{
+                //     xtype: 'radiogroup',
+                //     fieldLabel: 'جنسیت',
+                //     name: 'gender',
+                //     reference: 'gender',
+                //     items: [
+                //         {boxLabel: 'مرد', inputValue: 'man' },
+                //         {boxLabel: 'زن', inputValue: 'woman'}
+                //     ]
+                // }
+                , {
                     xtype: 'datefield',
                     fieldLabel: 'تاریخ گواهی نامه',
                     name: 'certificateYear',

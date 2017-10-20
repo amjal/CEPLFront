@@ -8,10 +8,10 @@ Ext.define('CEPLFront.store.TestStore', {
 
     //fields: ['os', 'data1' ],
     data: [
-        { os: 'Android', data1: 61.3 },
-        { os: 'BlackBerry', data1: 8.7 },
-        { os: 'iOS', data1: 17.9 },
-        { os: 'Windows Phone', data1: 10.2 },
-        { os: 'Others', data1: 1.9 }
+        { os: 'آفتابی', data1: 61.3 },
+        { os: 'ابری', data1: 8.7 },
+        { os: 'بارانی', data1: 17.9 },
+        { os: 'برفی', data1: 10.2 },
+        { os: 'یخبندان', data1: 1.9 }
     ]
 });

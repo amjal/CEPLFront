@@ -37,7 +37,7 @@ Ext.define('CEPLFront.view.ranking.Ranking', {
                     },
                     columns: [
                         {  text: 'شناسه', dataIndex: 'id', flex: 1},
-                        {  text: 'نام کاربری', dataIndex: 'usertext', flex: 3},
+                        {  text: 'نام کاربری', dataIndex: 'username', flex: 3},
                         {  text: 'تاریخ تولد', dataIndex: 'birthDate', flex: 3},
                         {  text: 'جنسیت', dataIndex: 'gender', flex: 2},
                         {  text: 'تاریخ گرفتن گواهینامه', dataIndex: 'certificateYear', flex: 4},
